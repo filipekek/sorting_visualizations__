@@ -3,7 +3,7 @@ name: Update Visualizations
 on:
   schedule:
     # Runs every 6 hours (adjust cron schedule as needed)
-    - cron: "0 */6 * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch: # Allow manual triggering of the workflow
 
 jobs:
@@ -31,8 +31,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "filipekek"
+        git config --global user.email "filipb.may@gmail.com"
         git add *.html
         git commit -m "Updated visualizations via GitHub Actions" || echo "No changes to commit"
         git push
